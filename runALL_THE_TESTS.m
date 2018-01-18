@@ -6,7 +6,8 @@ try
     import('matlab.unittest.plugins.codecoverage.CoberturaFormat');
 
     ws = getenv('WORKSPACE');
-    addpath(ws);
+    src = fullfile(ws,'source');
+    addpath(src);
     
     tests = fullfile(ws, 'unittest');
     suite = testsuite(tests);
@@ -22,8 +23,8 @@ try
     runner.addPlugin(XMLPlugin.producingJUnitFormat(resultsFile));
    
     coverageFile = fullfile(resultsDir, 'cobertura.xml');
-    runner.addPlugin(CodeCoveragePlugin.forFolder(ws,...
-        'Producing', CoberturaFormat(coverageFile)));
+    runner.addPlugin(CodeCoveragePlugin.forFolder(src,...
+        'Producing', CoberturaFormat(coverageFile),'IncludingSubfolders',true));
  
     results = runner.run(suite) 
 catch e
