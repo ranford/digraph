@@ -6,9 +6,7 @@ try
     import('matlab.unittest.plugins.codecoverage.CoberturaFormat');
 
     ws = getenv('WORKSPACE');
-    
-    src = fullfile(ws, 'source');
-    addpath(src);
+    addpath(ws);
     
     tests = fullfile(ws, 'unittest');
     suite = testsuite(tests);
