@@ -22,7 +22,7 @@ try
     runner.addPlugin(XMLPlugin.producingJUnitFormat(resultsFile));
    
     coverageFile = fullfile(resultsDir, 'cobertura.xml');
-    runner.addPlugin(CodeCoveragePlugin.forFolder(src,...
+    runner.addPlugin(CodeCoveragePlugin.forFolder(ws,...
         'Producing', CoberturaFormat(coverageFile)));
  
     results = runner.run(suite) 
