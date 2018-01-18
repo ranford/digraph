@@ -10,7 +10,7 @@ try
     src = fullfile(ws, 'source');
     addpath(src);
     
-    tests = fullfile(ws, 'tests');
+    tests = fullfile(ws, 'unittest');
     suite = testsuite(tests);
 
     % Create and configure the runner
