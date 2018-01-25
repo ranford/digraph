@@ -14,7 +14,26 @@
     <param.products.version />
     <param.platforms />
     <param.guid>439a7375-76ce-4907-a6a5-9fd396157b1a</param.guid>
-    <param.exclude.filters />
+    <param.exclude.filters>% List files contained in your toolbox folder that you would like to exclude
+% from packaging.  Excludes should be listed relative to the toolbox folder.
+% Some examples of how to specify excludes are provided below:
+%
+% A single file in the toolbox folder:
+% .svn
+%
+% A single file in a subfolder of the toolbox folder:
+% example/.svn
+%
+% All files in a subfolder of the toolbox folder:
+% example/*
+%
+% All files of a certain name in all subfolders of the toolbox folder:
+% **/.svn
+%
+% All files matching a pattern in all subfolders of the toolbox folder:
+% **/*.bak
+%
+**/._*</param.exclude.filters>
     <param.examples />
     <param.demosxml />
     <param.apps />
@@ -36,7 +55,6 @@
       <param.products.id />
       <param.products.version />
       <param.platforms />
-      <param.exclude.filters />
       <param.examples />
       <param.demosxml />
       <param.apps />
@@ -50,7 +68,6 @@
       <file>${PROJECT_ROOT}/source</file>
     </fileset.rootdir>
     <fileset.rootfiles>
-      <file>${PROJECT_ROOT}/source/._@digraph</file>
       <file>${PROJECT_ROOT}/source/@digraph</file>
     </fileset.rootfiles>
     <fileset.depfun.included />
